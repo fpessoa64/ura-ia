@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install Asterisk
 WORKDIR /usr/src
-RUN git clone -b 18 https://gerrit.asterisk.org/asterisk asterisk
+RUN git clone -b 18 https://github.com/asterisk/asterisk.git asterisk
 WORKDIR /usr/src/asterisk
 RUN contrib/scripts/get_mp3_source.sh && \
     contrib/scripts/install_prereq install && \
