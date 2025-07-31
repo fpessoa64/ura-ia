@@ -2,7 +2,10 @@ version: '3.8'
 
 services:
   asterisk:
-    build: ./asterisk
+    build: 
+      context: ./asterisk
+      dockerfile: Dockerfile
+    image: ura-asterisk:latest
     container_name: asterisk
 
     ports:
