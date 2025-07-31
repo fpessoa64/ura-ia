@@ -4,6 +4,7 @@ services:
   asterisk:
     build: ./asterisk
     container_name: asterisk
+
     ports:
       - "5060:5060/udp"    # SIP UDP
       - "8088:8088"        # ARI HTTP interface
@@ -11,6 +12,7 @@ services:
     volumes:
       - ./asterisk/extensions.conf:/etc/asterisk/extensions.conf
       - ./asterisk/sip.conf:/etc/asterisk/sip.conf
+      - ./asterisk/pjsip.conf:/etc/asterisk/pjsip.conf
       - ./asterisk/ari.conf:/etc/asterisk/ari.conf
       - ./asterisk/http.conf:/etc/asterisk/http.conf
     networks:
