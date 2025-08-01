@@ -2,13 +2,9 @@ version: '3.8'
 
 services:
   asterisk:
-    build: 
-      context: ./asterisk
-      dockerfile: Dockerfile
-    image: ura-asterisk:latest
-    container_name: asterisk
+    image: andrius/asterisk 
     restart: unless-stopped
-    platform: linux/amd64
+
     #network_mode: host
 
     ports:
